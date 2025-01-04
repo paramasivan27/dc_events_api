@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    container_name: dc_events_api
+    ports:
+      - "8000:8000"
+    networks:
+      - shared_rag_network
+    environment:
+      DB_NAME: WMS
+      DB_USER: postgres
+      DB_PASSWORD: P0stGr3sM6ntr6
+      DB_HOST: host.docker.internal
+networks:
+  shared_rag_network:
+    external: true
