@@ -5,7 +5,7 @@ services:
     build: .
     container_name: dc_events_api
     ports:
-      - "8000:8000"
+      - "8001:8000"
     networks:
       - shared_rag_network
     environment:
